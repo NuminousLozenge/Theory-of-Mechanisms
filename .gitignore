@@ -3,3 +3,4 @@ __pycache__
 *.npy
 .ipynb_checkpoints/
 scripts/test_synthesis.ipynb
+scripts/test_synthesis2.ipynb

@@ -123,6 +123,20 @@ class Point():
         c.vel = - self.vel
         c.acc = - self.acc
         return c
+    
+    def __mul__(self, n):
+        c = Point()
+        c.pos = n*self.pos
+        c.vel = n*self.vel
+        c.acc = n*self.acc
+        return c
+
+    def __truediv__(self, n):
+        c = Point()
+        c.pos = self.pos/n
+        c.vel = self.vel/n
+        c.acc = self.acc/n
+        return c       
 
     def __repr__(self):
         str = f"__name__\n"
