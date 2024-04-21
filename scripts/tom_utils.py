@@ -77,10 +77,6 @@ class fourBar():
                       ta, tb, tc, td,
                       ox=0, oy=0):
 
-        plt.xlim([-80, 60])
-        plt.ylim([-100, 60])
-        plt.gca().set_aspect('equal')
-
         plt.grid("on")
         plt.plot([ox+0, ox+a*np.cos(ta)],
                  [oy+0, oy+a*np.sin(ta)])

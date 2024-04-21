@@ -97,6 +97,11 @@ class jansenLinkage():
 
     def plot_jansen_linkage(self, idx):
         plt.cla()
+
+        plt.xlim([-160, 120])
+        plt.ylim([-200, 120])
+        plt.gca().set_aspect('equal')
+
         res, _, _, _ = self.kinematic_analysis(2*idx*np.pi/180)
 
         fourBar().plot(self.link["n"], self.link["m"],
@@ -123,8 +128,17 @@ class jansenLinkage():
                  [self.link["b"]*np.sin(res["tb"]), -self.link["d"]*np.sin(res["td"])])
 
         plt.plot(res["px"], res["py"], "ro")
+        plt.plot(self.couper_curve[:, 0],self.couper_curve[:, 1])
 
     def display(self, file="../outputs/jansen_linkage.gif", save=True):
+
+        # generate coupler curve
+        self.couper_curve  = []
+        for i in range(360):
+            pos, _, _ , _ = self.kinematic_analysis(tm=i*np.pi/180)
+            self.couper_curve.append([pos["px"], pos["py"]])
+
+        self.couper_curve = np.array(self.couper_curve)       
 
         self.fig, self.ax = plt.subplots(figsize=(10, 5))
         self.animation = matplotlib.animation.FuncAnimation(self.fig,
