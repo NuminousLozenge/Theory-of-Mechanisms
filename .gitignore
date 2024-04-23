@@ -4,3 +4,7 @@ __pycache__
 .ipynb_checkpoints/
 scripts/test_synthesis.ipynb
 scripts/test_synthesis2.ipynb
+data/grf_ref.jpeg
+data/jansen_dynamics.jpeg
+data/position_solution.drawio
+data/position_solution.png

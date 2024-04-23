@@ -24,6 +24,8 @@ class jansenLinkage():
         if tn is not None:
             self.tn = tn
 
+        self.couper_curve = None
+
     def kinematic_analysis(self, tm, wm=0, wn=0, am=0, an=0):
 
         tn = self.tn
@@ -128,7 +130,8 @@ class jansenLinkage():
                  [self.link["b"]*np.sin(res["tb"]), -self.link["d"]*np.sin(res["td"])])
 
         plt.plot(res["px"], res["py"], "ro")
-        plt.plot(self.couper_curve[:, 0],self.couper_curve[:, 1])
+        if self.couper_curve is not None:
+            plt.plot(self.couper_curve[:, 0],self.couper_curve[:, 1])
 
     def display(self, file="../outputs/jansen_linkage.gif", save=True):
 
