@@ -32,9 +32,9 @@ The objective of kinematic analysis is to determine the position, velocity and a
   <img src="outputs/jansen_linkage.gif" width="500" title="Kinematic animation of the Jansen Linkage"/>
 </p>
 <p float="left">
-  <img src="outputs/kinematic_analysis/position_angle_plots.png" width="200" title="Position vs time plot of each joint"/>
-  <img src="outputs/kinematic_analysis/velocity_angle_plots.png" width="200" title="Velocity vs time plot of each joint"/>
-    <img src="outputs/kinematic_analysis/acceleration_angle_plots.png" width="200" title="Acceleration vs time plot of each joint"/>
+  <img src="outputs/kinematic_analysis/position_angle_plots.png" width="250" title="Position vs time plot of each joint"/>
+  <img src="outputs/kinematic_analysis/velocity_angle_plots.png" width="250" title="Velocity vs time plot of each joint"/>
+    <img src="outputs/kinematic_analysis/acceleration_angle_plots.png" width="250" title="Acceleration vs time plot of each joint"/>
 </p>
 
 ## Dynamic analysis
